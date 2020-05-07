@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+psycopg2-binary = "*"
+uszipcode = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+makemigrations = "python isolationweb/manage.py makemigrations"
+migrate = "python isolationweb/manage.py migrate"
+shell = "python isolationweb/manage.py shell"
+start = "python isolationweb/manage.py runserver"
+superuser = "python isolationweb/manage.py createsuperuser"
