@@ -26,8 +26,8 @@ from webmanager.models import Place, Person, ConnectedPlace
 def _places_to_nodes(place):
     return {
         'id': place.id,
-        'label': place.house_name,
-        'size': place.user_count,
+        'label': place.name,
+        'size': 1,
         'color': '#009',
         'x': place.lng,
         'y': place.lat * -1,
