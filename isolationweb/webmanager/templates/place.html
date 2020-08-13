@@ -1,0 +1,28 @@
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="/edit_place" method="post">
+  <h1>Your Household</h1>
+  <input name="id" value="{{place.id}}" type="hidden">
+
+  {% csrf_token %}
+  <label>
+    Household Name
+    <input type="text" name="name" id="name" value="{{place.name}}">
+  </label>
+  <label>
+    Zip Code
+    <input type="zip_code" name="zip_code" id="zip_code" value="{{place.zip_code}}">
+  </label>
+
+  <h2>Household Members</h2>
+
+  {% for person in place.person_set.all %}
+    <input name="person_id" value="{{person.id}}" type="hidden">
+    <label>
+      Member
+      <input name="person_name" value="{{person.name}}" type="text">
+    </label>
+  {% endfor %}
+
+  <input type="submit" value="Edit">
+</form>
