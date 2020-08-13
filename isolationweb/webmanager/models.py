@@ -29,16 +29,9 @@ class ConnectedPlace(models.Model):
     connected_place = models.UUIDField(null=False)
 
 
-class CovidStatusChoices(models.TextChoices):
-    UNKNOWN = 'Unknown'
-    POSITIVE = 'Positive'
-    NEGATIVE = 'Negative'
-
-
 class Person(models.Model):
     place = models.ForeignKey(Place, on_delete=models.CASCADE)
     name = models.CharField(max_length=256)
-    covid_status = models.CharField(max_length=32, choices=CovidStatusChoices.choices, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
