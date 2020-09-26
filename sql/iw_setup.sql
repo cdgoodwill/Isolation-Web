@@ -22,7 +22,7 @@ VALUES
 ('f531b79b-02aa-48a6-8b08-e8b4fb8ee24d','Bohemia','hans.sprecher+parkslope@gmail.com',11215),
 ('501edbf4-0a10-4ea3-b7dc-4006d1d07c81','The Park','park.slope@gmail.com',11215),
 ('60e5be64-021b-4197-b35d-9e555bfa02c5','Bunker','hans.sprecher+les@gmail.com',10002),
-('7c599157-bc92-49ac-93e1-5a0ab8620f80','Pricess Castle','hans.sprecher+uws@gmail.com',10025);
+('7c599157-bc92-49ac-93e1-5a0ab8620f80','Princess Castle','hans.sprecher+uws@gmail.com',10025);
 
 select * from users;
 
